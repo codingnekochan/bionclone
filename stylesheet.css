@@ -128,7 +128,7 @@ a{
     animation-name: fading-movement;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 .landing__main--header::before,
