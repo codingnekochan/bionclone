@@ -1,0 +1,611 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    background-color: hsla(264, 52%, 11%, 1);
+  }
+body{
+    width: 100%;
+    min-height: 100vh;
+    position:relative;
+    background: url(./images/vectors/background\ linearg.svg) no-repeat;
+    background-size: contain;
+    
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h4{
+    
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+}
+h1,
+h2,
+h3,
+h4,
+ul{
+    color:hsla(0, 0%, 100%, 1);
+}
+ul{
+    list-style: none;
+}
+h3,
+ul,
+p,
+a{
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+p{
+    color:hsla(240, 10%, 59%, 1);
+}
+span,
+a{
+    display: inline-block;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+}
+/* General styling */
+.container{
+    width: 100%;
+    display: flex;
+}
+.underline-style{
+    text-decoration: underline; /*appears in follow-info and bion__about--heading*/
+}
+/* BION HEADER section acrosss all pages */
+/* navigation section across all pages */
+.bion__header{
+    padding: 5.4rem 10rem 0;
+    margin-bottom: 10rem;
+}
+.header__navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.header__navigation--list{
+    display: flex;
+    align-items: center;
+    gap:3.2rem;
+    color:hsla(0, 0%, 100%, 1);
+    font-size: 2rem;
+    line-height:2.5rem;
+}
+.icon__link{
+    margin:.8rem;
+    background:hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+}
+.apple-icon__link{
+    padding: 2.4rem 2.5rem 2.5rem 2.6rem;
+}
+.play-icon__link{
+    padding: 2.5rem 2.5rem 2.4rem 2.6rem;
+}
+/* LANDING PAGE */
+/* Landing page MAIN SECTION */
+.main__header{
+    padding: 0 8.2rem;
+}
+/* Landing Header Section */
+.landing__main--header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12.2rem 16rem;
+    margin-bottom: 7.9rem;
+    text-align: center;
+    position: relative;
+}
+/* header stylings using psueodo  elements and animation*/
+/* pseudo element and animation styling across all pages */
+.landing__main--header::before,
+.landing__main--header::after,
+.landing__main--heading::before,
+.landing__main--heading::after,
+.landing__main--links::before,
+.landing__main--links::after,
+.pricing__main--header::before,
+.pricing__main--header::after,
+.pricing__main--heading::before,
+.pricing__main--heading::after,
+.pricing__main--details::before,
+.pricing__main--details::after{
+    position: absolute;
+    animation-name: fading-movement;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+}
+
+.landing__main--header::before,
+.landing__main--header::after,
+.landing__main--heading::before,
+.landing__main--heading::after,
+.pricing__main--header::before,
+.pricing__main--header::after,
+.pricing__main--heading::before,
+.pricing__main--heading::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;  
+}
+.landing__main--links::before,
+.landing__main--links::after,
+.pricing__main--details::before,
+.pricing__main--details::after{
+    content:url(./images/vectors/curvepath.svg);
+}
+
+.landing__main--header::before,
+.pricing__main--header::before{
+    background: hsla(21, 100%, 80%, 1);
+    animation-duration: 5.8s;
+}
+
+.landing__main--header::after,
+.pricing__main--header::after{
+    background:hsla(0, 100%, 80%, 1);
+    animation-duration: 3s;
+}
+.landing__main--heading::before,
+.pricing__main--heading::before{
+    background: hsla(46, 100%, 80%, 1);
+    animation-duration: 5.5s;
+}
+
+.landing__main--heading::after,
+.pricing__main--heading::after{
+    background: hsla(30, 100%, 80%, 1);
+    animation-duration: 4s;
+}
+
+.landing__main--links::before,
+.pricing__main--details::before{ 
+    animation-duration: 6s;
+}
+
+.landing__main--links::after,
+.pricing__main--details::after{
+    transform: rotate(109deg);
+    animation-duration: 5s;
+}
+/* pseudo element styling  for landing page*/
+.landing__main--header::before{
+    left: 0%;
+    right: 98.86%;
+    top: 8.99%;
+    bottom: 87.85%;  
+}
+.landing__main--header::after{
+    left: 89.68%;
+    right: 7.18%;
+    top: 0%;
+    bottom: 96.85%;
+}
+.landing__main--heading::before{
+    left: 5.3%;
+    right: 93.56%;
+    top: 96.85%;
+    bottom: 0%;   
+}
+.landing__main--heading::after{
+    left: 98.86%;
+    right: 0%;
+    top: 46.69%;
+    bottom: 50.16%; 
+}
+.landing__main--links::before{
+
+    left: 9.48%;
+    right: 87.9%;
+    top: 85.36%;
+    bottom: 9.18%;
+
+}
+.landing__main--links::after{
+    left: 85.51%;
+    right: 11.44%;
+    top: 85.35%;
+    bottom: 9.18%;
+}
+/* animation styling */
+@keyframes fading-movement{
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    85%{
+       opacity: 0.1;
+    }
+    100%{
+        opacity: 0;
+        top:-15%;
+        bottom: 100%;
+    }
+}
+
+/* page heading */
+.landing__main--heading{
+    font-size: 10rem;
+    line-height: 11.2rem;   
+    letter-spacing: -0.05em;
+    margin-bottom: 2.4rem;
+}
+.gradient-font{
+    background: -webkit-linear-gradient(180deg,hsla(305, 77%, 51%, 1), hsla(263, 90%, 61%, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.landing__main--details{
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 2.4rem;
+}
+/* landing header links */
+.download__links{
+    display: flex;
+    gap:2.4rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color:hsla(0, 0%, 100%, 0.3);
+}
+.store-link{
+    background: hsla(264, 26%, 20%, 1);
+    padding:2.4rem;
+    border-radius:20px;
+}
+.store-link .apple-icon,
+.store-link .play-icon{
+    position: relative;
+    top:.2rem;
+    right:.6rem;
+    padding-left:.6rem;
+}
+/* section one  */
+.bion__cta{
+    padding: 0 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.bion__cta--follow,
+.bion__cta--beta{
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+.bion__cta--follow{
+    width: 308px;
+}
+.follow-info,
+.beta-info{
+    color:hsla(0, 0%, 100%, 1);
+}
+.follow-info .pink-font{
+    color:hsla(330, 77%, 62%, 1);
+}
+.bion__cta--beta{
+    margin-left:8.6rem;
+    display: flex;
+    gap:.7rem;
+    align-items: center;
+    background: hsla(240, 17%, 35%, 0.2);
+    border-radius: 100px;
+    padding:1.3rem .8rem;
+}
+.beta-info{
+    min-width:158px;
+}
+.bion__cta--emoji{
+    background: hsla(264, 26%, 20%, 1);
+    padding: .3rem;
+    border-radius: 50%;
+}
+/* Section two: BIon About */
+.bion__about{
+    background: hsla(262, 43%, 14%, 1);
+    border-radius: 50px 50px 0 0;
+    padding:15.9rem 10rem 10.8rem;
+}
+/* how it works section */
+.bion__about--main{
+    gap:2.9rem;
+    align-items: center;
+    margin-bottom: 12rem;
+}
+.bion__about--heading{
+    max-width: 435px;
+    font-size: 7rem;
+    line-height: 7.8rem;
+    letter-spacing: -0.05em;    
+}
+/* steps list */
+.bion__steps--list{
+    min-width: 65%;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    line-height: 3rem;
+    background: url(./images/vectors/background\ circle.svg), url(./images/vectors/background\ circle.svg);
+    background-repeat: no-repeat;
+    background-position: 30% 50%, 69.5% 50%;
+    position: relative;
+}
+/* each step styling */
+.bion__steps--item{
+    width: 32.05%;
+    background: hsla(261, 37%, 15%, 1);
+    border-radius:40px;
+    padding: 2.4rem;
+}
+.steps__indicator{
+    margin-bottom: 1.7rem;
+    background:hsla(0, 0%, 85%, 0.05);
+    border-radius: 18px;
+}
+.bion__steps--heading{
+    margin-bottom: .8rem;
+}
+/* arrow placement using pseudo elements */
+.bion__steps--list .step-one::after{
+    content: url(./images/vectors/arrow1.svg);
+    position: absolute;
+    top:15%;
+    left:21.5%;
+}
+.bion__steps--list .step-two::after{
+    content: url(./images/vectors/arrow2.svg);
+    position: absolute;
+    top:15%;
+    left:57.37%;
+}
+.bion__steps--list .step-four::after{
+    content: url(./images/vectors/arrow3.svg);
+    position: absolute;
+    top:67.65%;
+    left:24.5%;
+}
+.bion__steps--list .step-five::after{
+    content: url(./images/vectors/arrow4.svg);
+    position: absolute;
+    top:67.65%;
+    left:58.37%;
+}
+/* why bion? section */
+.bion__about--why{
+    margin-bottom: 12rem;
+}
+.bion__about--why .mini-heading{
+    color:hsla(0, 0%, 100%, 1);
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 4rem;
+}
+.bion__about--why .major-heading{
+    font-size: 70px;
+    line-height: 78px;
+    letter-spacing: -0.05em;
+}
+.major-heading .grey-font{
+    color:hsla(0, 0%, 100%, 0.3);
+}
+/* Download Cta section across all pages */
+.bion__download{
+    background: url(./images/vectors/Pathbackground.svg), hsla(240, 17%, 35%, 0.1);
+    background-position: 0 4%;
+    gap:14rem;
+    align-items: flex-end;
+    padding-top: 7rem;
+    border-radius: 40px;
+}
+.bion__download--details .frame-image{
+    width:425px;
+    object-fit: cover;
+}
+/* details section */
+.bion__download--details{
+    max-width:39.65%;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 6.1rem;
+}
+.bion__download--heading{
+    font-size: 6rem;
+    line-height: 6.7rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 3.2rem;
+}
+/* PRICING SECTION */
+/* pricing header */
+.pricing__header{
+    margin-bottom: 9.65rem;
+}
+/* pricing__main section */
+.pricing__main{
+    padding:0 10rem;
+}
+/* pricing main header section */
+.pricing__main--header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 8rem;
+    position: relative;
+}
+.pricing__main--heading{
+    width: 566px;
+    font-size: 8rem;
+    line-height: 8.9rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 2.4rem;
+
+}
+.pricing__main--details{
+    width: 734px;
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+/* psuedo element styling for pricing page */
+.pricing__main--header::before{
+    left: 0%;
+    right: 98.86%;
+    top: 18.99%;
+    bottom: 87.85%;  
+}
+.pricing__main--header::after{
+    left: 89.68%;
+    right: 7.3%;
+    top: 0%;
+    bottom: 96.85%;
+}
+.pricing__main--heading::before{
+    left: 2.32%;
+    right: 95.1%;
+    top: 246.35%;
+    bottom: -65.52%; 
+}
+.pricing__main--heading::after{
+    left: 98.86%;
+    right: 0%;
+    top: 99.89%;
+    bottom: -50.16%; 
+}
+.pricing__main--details::before{
+    left: 5.53%;
+    right: 89.74%;
+    top: 218.48%;
+    bottom: -35.26%;
+    
+}
+.pricing__main--details::after{
+    left: 87.51%;
+    right: 9.44%;
+    top: 218.08%;
+    bottom: 65.64%;
+}
+/* pricing plan section */
+.pricing-section{
+    background: url(./images/vectors/linebg.svg), url(./images/vectors/linebg.svg), url(./images/vectors/linebg.svg), url(./images/vectors/linebg.svg), url(./images/vectors/linebg.svg);
+    background-repeat: no-repeat;
+    background-position: 0 45.80%, 0 56.49%, 0 67.18%, 0 77.87%, 0 88.56%;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+.pricing-section__benefits{
+    font-size: 2.2rem;
+    line-height: 3rem;
+}
+
+.benefits-list,
+.benefits-availability{
+    display: flex;
+    flex-direction: column;
+}
+.pricing-section__benefits .benefits-list{
+    gap: 10rem;
+    padding-bottom: 7rem;
+}
+/* pricing plan*/
+.pricing__plans{
+    width: 55.6%;
+    justify-content: center;
+    gap: 3rem;
+    margin-left: -100px;
+}
+/* plan card styling */
+.pricing__plan--card{
+    width:31%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.4rem 2.4rem 4rem;
+    background:hsla(262, 43%, 14%, 1);
+    border-radius: 40px;
+}
+.plan-icon{
+    padding: 1.1rem;
+    border: 3px solid hsla(0, 0%, 100%, 0.1);
+    border-radius: 50%;
+    margin-bottom: 1.6rem;
+}
+.pricing__minor-heading{
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color:hsla(0, 0%, 100%, 1);
+}
+.pricing__major-heading{
+    font-size: 3.5rem;
+    line-height: 5rem;
+    margin-bottom: 1.55rem;
+}
+.pricing__plan--details{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+}
+.pricing__cta--link{
+    color:hsla(0, 0%, 100%, 1);
+    font-size: 1.6rem;
+    line-height: 1.4rem;
+    padding: 2.4rem .8rem;
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+    margin-bottom: 15.6rem;
+}
+.pricing__cta--link .phrase{
+    width: 200px;
+}
+.benefits-availability {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    gap: 8.2rem;
+}
+.benefits-availability .num-of-cards{
+    margin-bottom: 1.rem;
+}
+.availability-check{
+    padding: 1.65rem 1.283rem 1.467rem;
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 50%;
+}
+/* end of pricing card styling */
+.pricing-section__benefits--explanation{
+    width:13%;
+}
+
+.pricing-section__benefits--explanation .benefits-list{
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: right;
+    color: hsla(240, 10%, 59%, 1);
+    gap:8rem;
+    padding-bottom: 5rem;
+}
+/* download cta */
+.pricing__main .bion__download{
+    margin-bottom: 10.15rem;
+}
